@@ -13,10 +13,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class PostController extends AbstractController
 {
     #[Route('/post', name: 'app_post')]
-    public function index(): Response
+    public function index(PostRepository $postRepository): Response
     {
         return $this->render('post/index.html.twig', [
-            'controller_name' => 'PostController',
+            'posts' => $postRepository->findAll(),
         ]);
     }
 
