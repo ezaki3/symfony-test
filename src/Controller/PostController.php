@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PostController extends AbstractController
 {
+    #[Route('/', name: 'app_top')]
     #[Route('/post', name: 'app_post')]
     public function index(PostRepository $postRepository): Response
     {
