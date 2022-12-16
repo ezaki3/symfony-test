@@ -3,19 +3,13 @@
 {% block title %}Posts{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-</style>
+<h1>Posts</h1>
 
-<div class="example-wrapper">
-    <h1>Posts</h1>
+<a href="{{ path('app_post_new') }}">新規作成</a>
 
-    <a href="{{ path('app_post_new') }}">新規作成</a>
-
-    <ul>
-        {% for post in posts %}
-        <li><a href="#">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+<ul>
+    {% for post in posts %}
+    <li><a href="{{ path('app_post_show', {'id': post.id}) }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
 {% endblock %}
