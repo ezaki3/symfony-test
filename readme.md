@@ -1,6 +1,6 @@
 # symfony-test
 
-Symfonyを使った会員登録、ログイン、投稿の作成、一覧、詳細のサンプル実装。  
+Symfony6.2を使った会員登録、ログイン、投稿の作成、一覧、詳細のサンプル実装。  
 PHP8.1以上、[composer](https://getcomposer.org/download/)が必要。
 
 ## Setup
